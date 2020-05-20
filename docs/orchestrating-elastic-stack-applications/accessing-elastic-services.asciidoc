@@ -150,7 +150,7 @@ Create a Kubernetes secret with:
 
 [source,sh]
 ----
-kubectl create secret generic my-cert --from-file=ca.crt=tls.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key
+kubectl create secret generic my-cert --from-file=ca.crt=ca.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key
 ----
 
 Then you just have to reference the secret name in the `http.tls.certificate` section of the resource manifest.
